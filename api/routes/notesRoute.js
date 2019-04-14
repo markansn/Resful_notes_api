@@ -12,14 +12,15 @@ module.exports = function(app) {
 
 
     app.route('/notes/:noteId')
+        .put(noteapp.archive_a_note)
         .get(noteapp.read_a_note)
-        .put(noteapp.update_a_note)
+        .post(noteapp.update_a_note)
         .delete(noteapp.delete_a_note);
 
-    app.route('/notes/add_archive/:noteId')
-        .put(noteapp.archive_a_note);
+
 
     app.route('/notes/archive/:noteId')
         .get(noteapp.read_an_archived_note)
+        .put(noteapp.unarchive_a_note)
         .delete(noteapp.delete_an_archived_note);
 };

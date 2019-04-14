@@ -114,14 +114,25 @@ exports.archive_a_note = function(req, res) {
 
         res = archive_note(note,res,true);
 
-        //var newNote = getNoteObject(true)(note);
-        //note.remove();
-        //newNote.save();
+
 
 
     });
 
 
+};
+
+
+exports.unarchive_a_note = function (req, res) {
+    var Note = getNoteObject(true);
+    Note.findOne({_id: req.params.noteId}, function(err, note) {
+
+        res = archive_note(note,res,false);
+
+
+
+
+    });
 };
 
 function archive_note(note,res,isArchive) {

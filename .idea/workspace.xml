@@ -4,6 +4,7 @@
     <list default="true" id="f30026c6-98e2-4f79-93d8-7fbca08a3a39" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/controllers/notesController.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/controllers/notesController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/notesModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/notesModel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/routes/notesRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/notesRoute.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -26,20 +27,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/controllers/notesController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="109" column="35" selection-start-line="109" selection-start-column="35" selection-end-line="109" selection-end-column="35" />
+            <state relative-caret-position="1815">
+              <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/models/notesModel.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -47,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/routes/notesRoute.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+            <state relative-caret-position="285">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -81,6 +82,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>consol</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="MIXED" />
@@ -89,10 +95,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/citations.txt" />
-        <option value="$PROJECT_DIR$/api/models/notesModel.js" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/api/routes/notesRoute.js" />
         <option value="$PROJECT_DIR$/api/controllers/notesController.js" />
+        <option value="$PROJECT_DIR$/api/models/notesModel.js" />
       </list>
     </option>
   </component>
@@ -130,6 +136,12 @@
               <item name="restful_notes" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="restful_notes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="restful_notes" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="restful_notes" type="b2602c69:ProjectViewProjectNode" />
@@ -190,7 +202,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554935861561</updated>
-      <workItem from="1554935863418" duration="13318000" />
+      <workItem from="1554935863418" duration="18076000" />
     </task>
     <task id="LOCAL-00001" summary="Created base server, can handle post and get requests">
       <created>1555248261175</created>
@@ -213,11 +225,25 @@
       <option name="project" value="LOCAL" />
       <updated>1555253287688</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Partly refactored controller and route code to make archive feature possible">
+      <created>1555263574554</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1555263574554</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Created archive_note feature">
+      <created>1555269419305</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1555269419305</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13318000" />
+    <option name="totallyTimeSpent" value="18076000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
@@ -225,7 +251,7 @@
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18114798" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18114798" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" weight="0.32953367" />
@@ -233,7 +259,7 @@
       <window_info anchor="bottom" id="Event Log" sideWeight="0.5002633" side_tool="true" weight="0.33989638" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4997367" visible="true" weight="0.30984455" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4997367" visible="true" weight="0.30984455" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -277,7 +303,9 @@
     <MESSAGE value="Created base server, can handle post and get requests" />
     <MESSAGE value="added citations" />
     <MESSAGE value="begun implementation of archive feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="begun implementation of archive feature" />
+    <MESSAGE value="Partly refactored controller and route code to make archive feature possible" />
+    <MESSAGE value="Created archive_note feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created archive_note feature" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/package-lock.json">
@@ -298,13 +326,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -319,14 +340,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/routes/notesRoute.js">
+    <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/models/notesModel.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/error/notFound.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/routes/notesRoute.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
@@ -335,8 +363,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/controllers/notesController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="109" column="35" selection-start-line="109" selection-start-column="35" selection-end-line="109" selection-end-column="35" />
+        <state relative-caret-position="1815">
+          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/models/notesModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
         </state>
       </provider>
     </entry>

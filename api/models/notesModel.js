@@ -15,6 +15,10 @@ var NotesSchema = new Schema({
     content: {
         type: String,
         required: 'Note content'
+    },
+    tags: {
+        type: [String],
+        required: []
     }
 });
 
