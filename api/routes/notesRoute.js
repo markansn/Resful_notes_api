@@ -17,10 +17,16 @@ module.exports = function(app) {
         .post(noteapp.update_a_note)
         .delete(noteapp.delete_a_note);
 
+    app.route('/notes/tags/:tags')
+        .get(noteapp.list_all_notes_with_tags);
 
 
     app.route('/notes/archive/:noteId')
         .get(noteapp.read_an_archived_note)
         .put(noteapp.unarchive_a_note)
         .delete(noteapp.delete_an_archived_note);
+
+    app.route('/notes/archive/tags/:tags')
+        .get(noteapp.list_all_archived_notes_with_tags);
+
 };

@@ -39,6 +39,27 @@ function list_all_notes(req,res,isArchive) {
     });
 };
 
+exports.list_all_notes_with_tags = function (req, res) {
+    res = list_notes_with_tags(req,res,false);
+
+
+};
+
+exports.list_all_archived_notes_with_tags = function (req, res) {
+    res = list_notes_with_tags(req,res,true);
+}
+
+function list_notes_with_tags(req,res,isArchive) {
+    var Note = getNoteObject(isArchive);
+    var tags = req.params.tags.split(",");
+    console.log(tags);
+    Note.find({tags: {$all: tags}}, function(err, note) { //$all means all tags listed must be present. $in can be used as OR.
+        if (err)
+            res.send(err);
+        res.json(note);
+    });
+}
+
 
 
 exports.create_a_note = function(req, res) {
@@ -165,3 +186,5 @@ function archive_note(note,res,isArchive) {
     return res;
 
 }
+
+
