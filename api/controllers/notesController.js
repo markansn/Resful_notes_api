@@ -9,10 +9,10 @@ var mongoose = require('mongoose');
 function getNoteObject(isArchive) {
     var Note;
     if (isArchive) {
-        console.log("yes");
+
         Note = mongoose.model('Notes','archive')
     } else {
-        console.log("no");
+
         Note = mongoose.model('Notes','notes')
     }
 
@@ -45,9 +45,10 @@ exports.create_a_note = function(req, res) {
     //var Note = getNoteObject(false);
     var Note = mongoose.model('Notes');
     var new_note = new Note(req.body);
+
     new_note.save(function(err, note) {
         if (err) {
-            console.log(err);
+
             res.send(err);
         }
         res.json(note);
@@ -76,6 +77,7 @@ function read_a_note(req, res, isArchive) {
 
 
 exports.update_a_note = function(req, res) {
+    var Note = getNoteObject(false);
     Note.findOneAndUpdate({_id: req.params.noteId}, req.body, {new: true}, function(err, note) {
         if (err)
             res.send(err);
@@ -107,6 +109,48 @@ function delete_a_note(req, res, isArchive) {
 }
 
 exports.archive_a_note = function(req, res) {
-    console.log(req.params.noteId);
+    var Note = getNoteObject(false);
+    Note.findOne({_id: req.params.noteId}, function(err, note) {
+
+        res = archive_note(note,res,true);
+
+        //var newNote = getNoteObject(true)(note);
+        //note.remove();
+        //newNote.save();
+
+
+    });
+
+
+};
+
+function archive_note(note,res,isArchive) {
+    var newNote = getNoteObject(isArchive);
+
+    if(note != null) {
+        var to_save = new newNote({
+            _id: note._id,
+            name: note.name,
+            content: note.content,
+            Created_date: note.Created_date
+        });
+
+        to_save.save(function (err, note) {
+            if (err) {
+
+                res.send(err);
+            }
+            res.json(note);
+        });
+
+        note.remove();
+
+    } else {
+        res.send({message: 'Note not found'});
+    }
+
+
+
+    return res;
 
 }
