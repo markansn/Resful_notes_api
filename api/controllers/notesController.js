@@ -1,24 +1,46 @@
 'use strict';
 
 
-var mongoose = require('mongoose'),
-    Note = mongoose.model('Notes');
+var mongoose = require('mongoose');
+//var Note = mongoose.model('Notes','notes');
+// var acrhiveNote = mongoose.model('Notes','archive')
+
+
+function getNoteObject(req) {
+    var Note;
+    if (req.params.isArchive == "true") {
+        console.log("yes");
+        Note = mongoose.model('Notes','archive')
+    } else {
+        console.log("no");
+        Note = mongoose.model('Notes','notes')
+    }
+
+    return Note;
+}
+
 
 exports.list_all_notes = function(req, res) {
+    //console.log(req.params.test123 == true);
+    var Note = getNoteObject(req)
     Note.find({}, function(err, note) {
         if (err)
             res.send(err);
         res.json(note);
-    });
+});
 };
 
 
 
 
+
+
 exports.create_a_note = function(req, res) {
+    var Note = getNoteObject(req);
     var new_note = new Note(req.body);
     new_note.save(function(err, note) {
         if (err)
+            console.log(err);
             res.send(err);
         res.json(note);
     });
