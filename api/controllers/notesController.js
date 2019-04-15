@@ -51,8 +51,10 @@ exports.list_all_archived_notes_with_tags = function (req, res) {
 
 function list_notes_with_tags(req,res,isArchive) {
     var Note = getNoteObject(isArchive);
+
     var tags = req.params.tags.split(",");
-    console.log(tags);
+
+
     Note.find({tags: {$all: tags}}, function(err, note) { //$all means all tags listed must be present. $in can be used as OR.
         if (err)
             res.send(err);
@@ -63,7 +65,7 @@ function list_notes_with_tags(req,res,isArchive) {
 
 
 exports.create_a_note = function(req, res) {
-    //var Note = getNoteObject(false);
+
     var Note = mongoose.model('Notes');
     var new_note = new Note(req.body);
 
