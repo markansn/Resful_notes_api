@@ -180,7 +180,7 @@ function archive_note(note,res,isArchive) {
         note.remove();
 
     } else {
-        res.send({message: 'Note not found'});
+        res.send({message: 'ERR: Note not found'});
     }
 
 
