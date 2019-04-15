@@ -19,10 +19,15 @@ Get request at http://localhost:3000/notes
 
 **Create a new note:**
 Post request at http://localhost:3000/notes
+
 Data:
+
 name : String
+
 content : String
+
 tags : Array
+
 
 **List all archived notes:**
 Get request at http://localhost:3000/notes/archive
@@ -36,11 +41,18 @@ Get request at http://localhost:3000/notes/{noteId}
 
 **Update a note:**
 Post request at http://localhost:3000/notes/{noteId}
+
 Data:
+
 name : String
+
 content : String
+
 tags : Array
+
+
 It is only necessary to include data that you want to change. 
+
 
 **Delete a note:**
 Delete request at http://localhost:3000/notes/{noteId}
