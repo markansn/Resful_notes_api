@@ -5,7 +5,7 @@ Utilising a Node.js server with Mongoose and a MongoDB backend.
 
 **Running the application**
 
-The server is started using the server.js file. Started the same as any other Node.js server. Npm packages should already be present in the node_modules file. The database the application communicates with is on the cloud so there is no need to download anything. However, the cloud service I am using operates a IP whitelist system so **I will need your IP in order to whitelist it.** Please email me at **manson10@hotmail.co.uk** with the ip.
+The server is started using the server.js file. Started the same as any other Node.js server. Npm packages should already be present in the node_modules file. The database the application communicates with is on the cloud so there is no need to download anything. However, the cloud service I am using operates a IP whitelist system so **I will need your IP in order to whitelist it.** 
 
 **How to use**
 
